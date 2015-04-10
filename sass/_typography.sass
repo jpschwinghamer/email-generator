@@ -1,0 +1,55 @@
+$base-font-stack: "sqmarket", Helvetica
+$header-color: #2e3b4e
+$body-color: #5F6A7D
+$link-color: #2586b7
+
+body
+  font-family: $base-font-stack
+  font-weight: 300
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+
+h1
+  font-family: $base-font-stack
+  font-weight: 300
+  font-size: 28px
+  line-height: 32px
+  color: $header-color
+  margin: 0 0 10px 0
+
+h2
+  font-family: $base-font-stack
+  font-weight: 500
+  font-size: 14px
+  line-height: 22px
+  color: $header-color
+  margin: 0
+
+p
+  font-family: $base-font-stack
+  font-weight: 300
+  font-size: 14px
+  line-height: 22px
+  color: $body-color
+  margin: 0
+  &[class*="lede"]
+    max-width: 21em
+
+a
+  font-family: $base-font-stack
+  font-weight: inherit
+  font-size: 14px
+  line-height: 22px
+  color: $link-color
+  margin: 0
+  text-decoration: none
+  &[class*="block-link"]
+    display: block
+  &[class*="button-text"]
+    font-weight: 700
+    font-size: 11px
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 500
+    color: white
+    line-height: 11px

@@ -1,0 +1,90 @@
+$breakpoint: 480px
+$email-width: 640px
+$email-small-width: 290px
+$col-space: 10px
+$small-space: 20px
+$medium-space: 30px
+$accent-gray: #f0f0f0
+$button-blue: #2996cc
+$margin-sizes: "col", "small", "medium"
+$direction-props: "top", "right", "bottom", "left"
+$margin-values: $col-space, $small-space, $medium-space
+
+// Generate margin classes
+@each $direction-prop in $direction-props
+  @for $i from 1 through length($margin-sizes)
+    *[class*="gap-#{$direction-prop}-#{nth($margin-sizes, $i)}"]
+      margin-#{$direction-prop}: #{nth($margin-values, $i)}
+
+body
+  padding: 0
+  margin: 0
+
+table
+  border-collapse: collapse
+  &[class="content-table"]
+    width: $email-width
+    @media (max-width: $breakpoint)
+      width: $email-small-width !important
+  &[class="column-table"]
+    width: $email-width/2
+    @media (max-width: $breakpoint)
+      width: $email-small-width !important
+  &[class*="attr-column"]
+    margin-left: 20px
+    width: $email-width/2 - $small-space
+    @media (max-width: $breakpoint)
+      margin-left: 0 !important
+      width: 100% !important
+  &[class*="accent-table"]
+    background-color: $accent-gray
+  &[class*="button-table"]
+    margin-bottom: $small-space
+    @media (max-width: $breakpoint)
+      margin-bottom: 0 !important
+
+td
+  &[class*="asset-group-divide"]
+    border-style: solid
+    border-width: 0 0 1px 0
+    border-color: #e0e0e0
+    @media (max-width: $breakpoint)
+      border: none !important
+  &[class*="button"]
+    background-color: $button-blue
+    border-radius: 4px
+    padding: 15px 40px
+
+img
+  display: block
+  border: 0 none
+  height:auto
+  line-height: 100%
+  outline: none
+  text-decoration:none
+  &.content-image
+    width: $email-width/2
+    margin-bottom: $small-space
+    @media (max-width: $breakpoint)
+      width: $email-small-width !important
+
+a
+  img
+    border: 0 none
+
+// Borders
+*[class*="border-top"]
+  border-style: solid
+  border-width: 1px 0 0 0
+  border-color: #e0e0e0
+
+*[class*="border-bottom"]
+  border-style: solid
+  border-width: 0 0 1px 0
+  border-color: #e0e0e0
+
+*[class*="hidden"]
+  display: none
+  font-size: 0
+  max-height: 0
+  overflow: hidden
