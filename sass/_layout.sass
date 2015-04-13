@@ -1,10 +1,11 @@
-$breakpoint: 480px
 $email-width: 640px
 $email-small-width: 290px
 $col-space: 10px
 $small-space: 20px
 $medium-space: 30px
+$breakpoint: $email-width + $small-space * 2
 $accent-gray: #f0f0f0
+$border-gray: #e0e0e0
 $button-blue: #2996cc
 $margin-sizes: "col", "small", "medium"
 $direction-props: "top", "right", "bottom", "left"
@@ -47,7 +48,7 @@ td
   &[class*="asset-group-divide"]
     border-style: solid
     border-width: 0 0 1px 0
-    border-color: #e0e0e0
+    border-color: $border-gray
     @media (max-width: $breakpoint)
       border: none !important
   &[class*="button"]
@@ -67,6 +68,9 @@ img
     margin-bottom: $small-space
     @media (max-width: $breakpoint)
       width: $email-small-width !important
+  &.bordered
+    width: $email-width/2 - 2 // Minus two for border width
+    border: 1px solid $border-gray
 
 a
   img
@@ -76,12 +80,12 @@ a
 *[class*="border-top"]
   border-style: solid
   border-width: 1px 0 0 0
-  border-color: #e0e0e0
+  border-color: $border-gray
 
 *[class*="border-bottom"]
   border-style: solid
   border-width: 0 0 1px 0
-  border-color: #e0e0e0
+  border-color: $border-gray
 
 *[class*="hidden"]
   display: none
