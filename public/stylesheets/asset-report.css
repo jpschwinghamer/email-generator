@@ -244,8 +244,12 @@ p {
 p[class*="lede"] {
   max-width: 21em;
 }
+/* line 38, ../../sass/_typography.sass */
+p[class*="subhead"] {
+  max-width: 42em;
+}
 
-/* line 39, ../../sass/_typography.sass */
+/* line 41, ../../sass/_typography.sass */
 a {
   font-family: inherit;
   font-weight: inherit;
@@ -255,11 +259,11 @@ a {
   margin: 0;
   text-decoration: none;
 }
-/* line 47, ../../sass/_typography.sass */
+/* line 49, ../../sass/_typography.sass */
 a[class*="block-link"] {
   display: block;
 }
-/* line 49, ../../sass/_typography.sass */
+/* line 51, ../../sass/_typography.sass */
 a[class*="button-text"] {
   font-family: "sqmarket", "HelveticaNeue-Medium", Helvetica, sans-serif;
   font-weight: 700;

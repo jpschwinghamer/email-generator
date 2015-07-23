@@ -53,3 +53,6 @@ DEPENDENCIES
   sass
   sinatra
   slim
+
+BUNDLED WITH
+   1.10.4
